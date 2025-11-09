@@ -16,8 +16,9 @@ export const SocketProvider = ({ children }) => {
   const [connected, setConnected] = useState(false)
 
   useEffect(() => {
-    const newSocket = io('http://localhost:3001', {
-      transports: ['websocket'],
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3001'
+    const newSocket = io(socketUrl, {
+      transports: ['websocket', 'polling'],
       reconnection: true,
       reconnectionDelay: 1000,
       reconnectionAttempts: 10

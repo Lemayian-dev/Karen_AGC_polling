@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:3001/api'
+const API_URL = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : 'http://localhost:3001/api'
 
 export const api = {
   // Create a new poll
