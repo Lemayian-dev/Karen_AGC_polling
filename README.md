@@ -10,6 +10,8 @@
 ╚═══════════════════════════════════════════════════════════════════╝
 ```
 
+<!-- Deployed to Vercel -->
+
 # KAGC Polling & Voting Software
 
 A modern, real-time polling and voting application designed for Karen Africa Gospel Church events, featuring live analytics, QR code integration, and KAGC branding.
